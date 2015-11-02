@@ -1,0 +1,196 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a single Drupal page.
+ */
+ #}
+<div class="row header">
+    <div class="col-xs-12"></div>
+</div>
+<div class="row module-news">
+    <div class="col-xs-12"></div>
+</div>
+<div class="row container module-directory">
+
+      <div class="col-xs-6 col-md-3"></div>
+      <div class="col-xs-6 col-md-3"></div>
+      <div class="col-xs-6 col-md-3"></div>
+      <div class="col-xs-6 col-md-3"></div>
+      <div class="col-xs-6 col-md-3"></div>
+      <div class="col-xs-6 col-md-3"></div>
+      <div class="col-xs-6 col-md-3"></div>
+      <div class="col-xs-6 col-md-3"></div>
+    </div>
+</div>
+<div class="row module-tweets">
+    <div class="col-xs-12"></div>
+</div>
+<div class="row module-organistations">
+    <div class="container col-xs-12"></div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-3"></div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-3"></div>
+    <div class="col-lg-2"></div>
+</div>
+<div class="row footer">
+    <div class="col-xs-12"></div>
+</div>
+ <header class="header-main">
+  <div class="menu-btn open" aria-hidden="true">&#9776; Menu</div>
+  <div class="contain">
+    <a  class ="logo" href="{{ front_page }}" title="{{ site_name }} » {{ site_slogan }}">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="20px" height="26px" viewBox="0 0 20 26" version="1.1">
+        <title>Logo</title>
+        <description>Logo</description>
+        <defs/>
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage" class="logo-svg">
+          <g sketch:type="MSLayerGroup" fill="">
+            <path d="M10.030309 0.4 C11.278764 2.5 12.8 4.1 14.3 5.8 C15.335503 6.9 16.4 8.1 17.4 9.4 L17.4504274 9.4 L17.457002 9.5 C18.9264957 11.3 19.7 13.7 19.6 16.1 C19.4360947 18.6 18.4 20.9 16.8 22.6 C14.9722551 24.5 12.6 25.5 10 25.5 C7.48330046 25.5 5.1 24.5 3.3 22.6 C1.61216305 20.9 0.6 18.6 0.5 16.1 C0.389020381 13.7 1.1 11.3 2.6 9.5 L2.60966469 9.4 L2.61617357 9.4 C3.66291913 8.1 4.7 6.9 5.8 5.8 C7.29664694 4.1 8.8 2.5 10 0.4 L10.030309 0.4 Z" sketch:type="MSShapeGroup"/>
+          </g>
+        </g>
+      </svg>
+    </a>
+    {% if page.nav %}
+      {{ page.nav }}
+    {% endif %}
+  </div>
+</header>
+
+<div class="offcanvas pushy pushy-left">
+  <div class="menu-btn close" aria-hidden="true">&#10005; Menu</div>
+  {% if page.nav %}
+    {{ page.nav }}
+  {% endif %}
+</div>
+
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
+
+<div id="container" class="container-main">
+
+  <!-- Front Page -->
+
+  {% if is_front %}
+    <div class="front">
+
+      <section class="cover">
+        <div class="contain">
+          {% if page.front_one %}
+            {{ page.front_one }}
+          {% endif %}
+        </div>
+      </section>
+
+      <section id="features" class="front-section features">
+        <div class="contain">
+          {% if page.front_two %}
+            {{ page.front_two }}
+          {% endif %}
+        </div>
+      </section>
+
+      <section class="front-section icons">
+        <div class="contain">
+          {% if page.front_three %}
+            {{ page.front_three }}
+          {% endif %}
+        </div>
+      </section>
+
+      <section class="front-section posts">
+        {% if page.front_four %}
+          {{ page.front_four }}
+        {% endif %}
+      </section>
+
+      <section class="front-section news">
+        <div class="contain">
+          {% if page.front_five %}
+            {{ page.front_five }}
+          {% endif %}
+        </div>
+      </section>
+
+      <section class="front-section featured">
+        <div class="featured-box">
+          {% if page.front_six %}
+            {{ page.front_six }}
+          {% endif %}
+        </div>
+        <div class="featured-box">
+          {% if page.front_seven %}
+            {{ page.front_seven }}
+          {% endif %}
+        </div>
+      </section>
+
+      <section class="front-section source">
+        <div class="contain">
+          {% if page.front_eight %}
+            {{ page.front_eight }}
+          {% endif %}
+        </div>
+      </section>
+
+    </div>
+
+    {% else %}
+
+    <!-- Main Content -->
+    <div class="content contain">
+      <main class="page-content" role="main">
+        <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+        {{ messages }}
+        {% if page.help %}
+          <div class="help">
+            {{ page.help }}
+          </div>
+        {% endif %}
+        {% if action_links %}
+          <ul class="action-links">
+            {{ action_links }}
+          </ul>
+        {% endif %}
+
+        {% if secondary_local_tasks %}
+          <div class="tabs-secondary clearfix" role="navigation">{{ secondary_local_tasks }}</div>
+        {% endif %}
+
+        {# {{ kint() }} #}
+        {# {{ kint(page) }} #}
+        {# Requiters Devel Module  #}
+
+        {{ title_prefix }}
+        {% if title %}
+          <h1 class="page-title">{{ title }}</h1>
+        {% endif %}
+        {{ title_suffix }}
+        {% if primary_local_tasks %}
+          {{ primary_local_tasks }}
+        {% endif %}
+
+        {% if page.content_top %}
+          {{ page.content_top }}
+        {% endif %}
+
+        {{ page.content }}
+
+        {% if page.content_bottom %}
+          {{ page.content_bottom }}
+        {% endif %}
+
+      {% endif %}
+
+    </main>
+  </div>
+</div>
+<footer class="footer-main">
+  <div class="contain">
+    {% if page.footer %}
+      {{ page.footer }}
+    {% endif %}
+    <a class="twitter" href="https://twitter.com/zetagraph"><img class="twitter-icon inject-svg" data-src="/themes/monoset/icons/twitter.svg" alt="twitter"></a>
+    <a class="top-link" href="#top"><img class="arrow-up inject-svg" data-src="/themes/monoset/icons/chevron-up.svg" alt="chevron-up"></a>
+  </div>
+</footer>

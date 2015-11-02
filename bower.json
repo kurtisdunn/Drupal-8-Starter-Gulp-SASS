@@ -1,0 +1,23 @@
+{
+  "name": "Base Drupal 8 Theme",
+  "description": "Base Drupal 8 Theme",
+  "main": "bower.json",
+  "authors": [
+    "Kurtis Dunn <contact@kurtisdunn.com.au>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5",
+    "font-awesome": "~4.4.0"
+  }
+}

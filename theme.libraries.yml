@@ -1,0 +1,8 @@
+global-css:
+  css:
+    theme:
+      css/bootstrap.css: {}
+
+global-js:
+  js:
+    js/main.js: {}

@@ -1,0 +1,29 @@
+name: Base Drupal 8 Theme
+description: 'Base Drupal 8 theme'
+type: theme
+core: 8.x
+base theme: classy
+libraries:
+  - theme/global-css
+  - theme/global-js
+
+stylesheets-remove:
+  - core/assets/vendor/normalize-css/normalize.css
+  - core/modules/system/css/system.module.css
+  - core/modules/system/css/system.theme.css
+  - core/modules/views/css/views.module.css
+
+# regions:
+#   content: Content
+#   content_top: 'Content Top'
+#   content_bottom: 'Content Bottom'
+#   nav: Navigation
+#   front_one: 'Front One'
+#   front_two: 'Front Two'
+#   front_three: 'Front Three'
+#   front_four: 'Front Four'
+#   front_five: 'Front Five'
+#   front_six: 'Front Six'
+#   front_seven: 'Front Seven'
+#   front_eight: 'Front Eight'
+#   footer: Footer
