@@ -4,7 +4,9 @@ A base Drupal 8 Theme using Drush CLI, Boostrap 3 SASS, Gulp for automation and 
 
 ###Prerequisites
 
-- [Drush CLI](http://docs.drush.org/en/master/install/) must be installed locally or globally for automating cache refresh with Gulp.
+- [Drupal 8](https://www.drupal.org/drupal-8.0.2-release-notes)
+- [NodeJS](https://nodejs.org/en/download/)
+- [Drush CLI](http://docs.drush.org/en/master/install/) must be installed locally or globally for automating cache refresh with Gulp. it is recommended that Drupal 8 sites are built using Composer, with Drush listed as a dependency.
 
 ```sh
 # Download latest stable release using the code below or browse to github.com/drush-ops/drush/releases.
@@ -20,5 +22,22 @@ sudo mv drush.phar /usr/local/bin/drush
 
 # Enrich the bash startup file with completion and aliases.
 drush init
+
+```
+
+### Usage
+
+```sh
+
+# clone a copy
+git clone https://github.com/kurtisdunn/Drupal-8-Theme-Bootstrap-3-SASS.git
+cd Drupal-8-Theme-Bootstrap-3-SASS
+
+# get it going:
+npm install
+bower install
+
+# run it
+gulp
 
 ```
