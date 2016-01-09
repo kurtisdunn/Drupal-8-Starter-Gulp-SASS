@@ -1,8 +1,8 @@
-# Drupal-8-Theme-Gulp-Bootstrap3-Sass-Browser-Sync
+# Drupal-8-Starter-Gulp-SASS
 A starter theme for Drupal 8 using Drush CLI, Boostrap 3 SASS, Gulp + BrowserSync for automation.
 
 
-###Prerequisites
+### Prerequisites
 
 - [Drupal 8](https://www.drupal.org/drupal-8.0.2-release-notes)
 - [NodeJS](https://nodejs.org/en/download/)
@@ -30,8 +30,8 @@ drush init
 ```sh
 
 # clone a copy
-git clone https://github.com/kurtisdunn/Drupal-8-Theme-Bootstrap-3-SASS.git
-cd Drupal-8-Theme-Bootstrap-3-SASS
+git clone https://github.com/kurtisdunn/Drupal-8-Starter-Gulp-SASS.git
+cd Drupal-8-Starter-Gulp-SASS
 
 # get it going:
 npm install
