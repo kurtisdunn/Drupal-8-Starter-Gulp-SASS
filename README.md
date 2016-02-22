@@ -1,5 +1,5 @@
 > ######  DEV BUILD
-> ######  Please note this isnt prod ready. It's more of a guide for future projects and will be updated in the future with > > ######  as I have more awesome Drupal 8 projects around the corner
+> #######  Please note this isnt prod ready. It's more of a guide for future projects and will be updated in the future with >  as I have more awesome Drupal 8 projects around the corner
 
 # Drupal-8-Starter-Gulp-SASS
 A starter theme for Drupal 8 using Drush CLI, Boostrap 3 SASS, Gulp + BrowserSync for automation.
